@@ -5,11 +5,11 @@ import java.util.Objects;
 public class Book {
 	private Long id;
 	private String title;
-	private String auhtor;
+	private String author;
 	
 	public Book(Long id, String title, String author) {
 		setId(id);
-		setAuhtor(author);
+		setauthor(author);
 		setTitle(title);
 		
 	}
@@ -30,17 +30,17 @@ public class Book {
 		this.title = title;
 	}
 
-	public String getAuhtor() {
-		return auhtor;
+	public String getauthor() {
+		return author;
 	}
 
-	public void setAuhtor(String auhtor) {
-		this.auhtor = auhtor;
+	public void setauthor(String author) {
+		this.author = author;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(auhtor, id, title);
+		return Objects.hash(author, id, title);
 	}
 
 	@Override
@@ -52,13 +52,13 @@ public class Book {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		return Objects.equals(auhtor, other.auhtor) && Objects.equals(id, other.id)
+		return Objects.equals(author, other.author) && Objects.equals(id, other.id)
 				&& Objects.equals(title, other.title);
 	}
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", auhtor=" + auhtor + "]";
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + "]";
 	}
 	
 	
