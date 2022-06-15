@@ -1,5 +1,7 @@
 package com.taison.servlets.dao;
 
-public interface DaoBook {
+import com.taison.servlets.models.Book;
+
+public interface DaoBook extends Dao<Book>{
 
 }
