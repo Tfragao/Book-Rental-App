@@ -21,6 +21,8 @@ public class BooksServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setAttribute("books", DaoBookMemory.getInstance().getAllBooks());
+		request.getRequestDispatcher("WEB-INF/views/books.jsp").forward(request, response);
 	}
 
 	
