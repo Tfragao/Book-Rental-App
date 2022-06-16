@@ -10,13 +10,13 @@
 <style><%@include file="/WEB-INF/views/css/books.css"%></style>
 </head>
 <body>
-
+	
 	 <table>
 	 		<thead>
 	 			<tr>
 	 				<th>Book id</th>
 	 				<th>Book title</th>
-	 				<th>Book author name</th>
+	 				<th>Author name</th>
 	 				<th>Comments</th>
 	 				<th>Options</th>
 	 			</tr>
