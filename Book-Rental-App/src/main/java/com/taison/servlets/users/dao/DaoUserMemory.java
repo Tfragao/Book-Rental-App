@@ -56,6 +56,20 @@ public class DaoUserMemory implements DaoUser {
 		
 		users.remove(id);
 	}
+
+	@Override
+	public User getByEmail(String email) {
+		
+        //	for (User user : users.values()) {
+		//		if (user.getEmail().equals(email)) {
+		//			return user;
+		//		}
+		//	}
+			
+		//	return null;
+			 
+			return users.values().parallelStream().filter(u -> u.getEmail().equals(email)).findFirst().orElse(null);
+		}
 	
 	
 }
