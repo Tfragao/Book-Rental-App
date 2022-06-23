@@ -21,10 +21,12 @@
 	 					<th>${user.id}</th>
 	 					<td>${user.email}</td>
 	 					<td>${user.password}</td>
-	 					<td>comments</td>
+	 					<td><c:if test="${user.email.contains(user.password)}">
+				Better Change password
+			</c:if></td>
 	 					<td>
-	 						<a class="btn btn-sm btn-primary" href="user?id=${user.id}">Edit</a>  <!-- TODO: change id number by book description, in order to appear in the url -->
-	 						<a class="btn btn-sm btn-danger" href="deleteUser?id=${user.id}">Delete</a>
+	 						<a class="btn btn-sm btn-primary" href="admin/user?id=${user.id}">Edit</a>  <!-- TODO: change id number by book description, in order to appear in the url -->
+	 						<a class="btn btn-sm btn-danger" href="admin/delete?id=${user.id}">Delete</a>
 	 					</td>
 	 				</tr>
 	 			</c:forEach>		
@@ -35,7 +37,7 @@
 	 				<td></td>
 	 				<td></td>
 	 				<td></td>
-	 				<td><a class="btn btn-sm btn-primary" href="book">Add a user</a></td>
+	 				<td><a class="btn btn-sm btn-primary" href="admin/user">Add a user</a></td>
 	 			</tr>
 	 		</tfoot>
 	 </table>
