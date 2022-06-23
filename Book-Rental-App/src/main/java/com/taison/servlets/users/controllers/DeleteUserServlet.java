@@ -18,7 +18,7 @@ public class DeleteUserServlet extends HttpServlet {
 		
 		Global.DAO.deleteUser(Long.parseLong(id));
 		
-		request.setAttribute("alertText", "The register has been deleted " + id + "correctly");
+		request.setAttribute("alertText", "The register " + id + " has been deleted correctly");
 		request.setAttribute("levelAlert", "success");
 		
 		request.getRequestDispatcher("/admin/users").forward(request, response);
