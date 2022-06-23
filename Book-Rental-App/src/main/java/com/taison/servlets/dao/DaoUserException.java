@@ -1,4 +1,4 @@
-package com.taison.servlets.users.dao;
+package com.taison.servlets.dao;
 
 public class DaoUserException implements DaoUser {
 

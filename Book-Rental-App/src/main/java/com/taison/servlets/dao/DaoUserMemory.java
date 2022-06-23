@@ -1,7 +1,6 @@
-package com.taison.servlets.users.dao;
+package com.taison.servlets.dao;
 
 import java.util.TreeMap;
-
 
 import com.taison.servlets.models.User;
 
@@ -41,12 +40,15 @@ public class DaoUserMemory implements DaoUser {
 	public User insertUser(User user) {
 		Long id = users.size() > 0 ? users.lastKey() + 1L : 1L;
 		user.setId(id);
-		users.put(user.getId(), user);
+		users.put(id, user);
 		return user;
 	}
 
 	@Override
 	public User modifyUser(User user) {
+		if(!users.containsKey(user.getId())) {
+			throw new DaoException("You can not modify an user that does not exist");
+		}
 		users.put(user.getId(), user);
 		return user;
 	}
