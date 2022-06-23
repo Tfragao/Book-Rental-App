@@ -1,4 +1,4 @@
-package com.taison.servlets.controllers;
+package com.taison.servlets.users.controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

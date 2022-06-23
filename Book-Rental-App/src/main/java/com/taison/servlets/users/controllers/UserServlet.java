@@ -48,12 +48,11 @@ public class UserServlet extends HttpServlet {
 					user.setId(Long.parseLong(id));
 					Global.DAO.modifyUser(user);
 				}
-				
-				request.setAttribute("alertText", "It has been " + op + "the register correctly");
+				request.setAttribute("alertText", "The register has been " + op +  " correctly");
 				request.setAttribute("levelAlert", "success");
 			
 		}catch(NumberFormatException e) {
-			request.setAttribute("alertText", "The option of " + op + "did not work");
+			request.setAttribute("alertText", "The option of " + op + " did not work");
 			request.setAttribute("levelAlert", "danger");
 		}
 		

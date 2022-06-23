@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if(validateUser != null) {
 			request.getSession().setAttribute("user", validateUser);
-			response.sendRedirect(request.getContextPath() + "/admn/users");
+			response.sendRedirect(request.getContextPath() + "/admin/users");
 			
 		}else {
 			request.setAttribute("alertText", "Email or password incorrect");
