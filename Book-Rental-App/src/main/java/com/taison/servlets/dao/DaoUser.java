@@ -1,6 +1,5 @@
-package com.taison.servlets.users.dao;
+package com.taison.servlets.dao;
 
-import com.taison.servlets.dao.DaoException;
 import com.taison.servlets.models.User;
 
 public interface DaoUser extends Dao<User> {
