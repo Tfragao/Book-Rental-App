@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 import com.taison.servlets.dao.DaoException;
-import com.taison.servlets.users.dao.DaoFactory;
-import com.taison.servlets.users.dao.DaoUser;
+import com.taison.servlets.dao.DaoFactory;
+import com.taison.servlets.dao.DaoUser;
 
 public class Global {
 	static final DaoUser DAO;
